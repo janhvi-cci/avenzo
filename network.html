@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EV Business Directory — AVENZO Network</title>
+  <meta name="description" content="Explore verified manufacturers, distributors, fleet operators, charging infra and institutions across India's EV ecosystem.">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- Sticky Global Navbar -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo-link" aria-label="AVENZO Home">
+        <img src="images/avenzo-logo.jpg" alt="AVENZO Logo" class="brand-logo-img">
+      </a>
+
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="network.html" class="nav-link active">Network</a>
+        <a href="opportunities.html" class="nav-link">Opportunities</a>
+        <a href="how-it-works.html" class="nav-link">How It Works</a>
+        <a href="verified.html" class="nav-link">AVENZO Verified</a>
+        <a href="about.html" class="nav-link">About</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="requirement.html" class="btn btn-secondary btn-sm">Post a Requirement</a>
+        <a href="join.html" class="btn btn-primary btn-sm">Join AVENZO</a>
+      </div>
+
+      <button class="mobile-menu-toggle" aria-label="Open Navigation Menu">
+        <i data-lucide="menu" style="width: 24px; height: 24px;"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-backdrop"></div>
+  <div class="mobile-nav-panel">
+    <div class="mobile-nav-header">
+      <img src="images/avenzo-logo.jpg" alt="AVENZO" style="height: 36px; width: auto;">
+      <button class="mobile-nav-close" style="background: none; border: none; cursor: pointer; color: #0f172a;" aria-label="Close Navigation Menu">
+        <i data-lucide="x" style="width: 24px; height: 24px;"></i>
+      </button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link">Home <i data-lucide="chevron-right" style="width: 16px;"></i></a>
+      <a href="network.html" class="mobile-nav-link active">Network <i data-lucide="chevron-right" style="width: 16px;"></i></a>
+      <a href="opportunities.html" class="mobile-nav-link">Opportunities <i data-lucide="chevron-right" style="width: 16px;"></i></a>
+      <a href="how-it-works.html" class="mobile-nav-link">How It Works <i data-lucide="chevron-right" style="width: 16px;"></i></a>
+      <a href="verified.html" class="mobile-nav-link">AVENZO Verified <i data-lucide="chevron-right" style="width: 16px;"></i></a>
+      <a href="about.html" class="mobile-nav-link">About <i data-lucide="chevron-right" style="width: 16px;"></i></a>
+    </div>
+    <div class="mobile-nav-actions">
+      <a href="requirement.html" class="btn btn-secondary w-full">Post a Requirement</a>
+      <a href="join.html" class="btn btn-primary w-full">Join AVENZO</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span> Ecosystem Directory
+        </div>
+        <h1 class="page-hero-title">Explore the EV Business Network</h1>
+        <p class="page-hero-desc">
+          Discover businesses and capabilities across India's EV ecosystem. Connect directly with verified manufacturers, dealers, fleet operators and service partners.
+        </p>
+      </div>
+    </section>
+
+    <!-- Directory Controls & Listing Section -->
+    <section class="section-py" style="background-color: var(--bg-page);">
+      <div class="container">
+        <div class="directory-controls">
+          <div class="search-input-wrapper">
+            <i data-lucide="search" class="search-input-icon" style="width: 20px; height: 20px;"></i>
+            <input 
+              type="text" 
+              id="directorySearch" 
+              class="search-input" 
+              placeholder="Search businesses, products, vehicle types or locations (e.g., Delhi, 3-Wheeler, Charging)..."
+            >
+          </div>
+
+          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+            <div class="filter-pills" role="tablist">
+              <button class="filter-pill active" data-filter="all">All Ecosystem</button>
+              <button class="filter-pill" data-filter="manufacturers">Manufacturers</button>
+              <button class="filter-pill" data-filter="distributors">Distributors / Dealers</button>
+              <button class="filter-pill" data-filter="fleets">Fleets & Logistics</button>
+              <button class="filter-pill" data-filter="institutions">Institutions</button>
+              <button class="filter-pill" data-filter="charging">Charging Infra</button>
+              <button class="filter-pill" data-filter="finance">Finance & Leasing</button>
+              <button class="filter-pill" data-filter="services">Services & Components</button>
+            </div>
+            <div id="directoryCount" style="font-size: 0.84rem; font-weight: 600; color: #64748b;">
+              Loading directory...
+            </div>
+          </div>
+        </div>
+
+        <!-- Directory Grid -->
+        <div id="directoryGrid" class="directory-grid">
+          <!-- Populated via js/network.js -->
+        </div>
+
+        <!-- Notice Banner -->
+        <div style="margin-top: 3.5rem; background: #ffffff; border: 1px solid var(--border-light); border-radius: var(--radius-lg); padding: 2rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem;">
+          <div style="max-width: 650px;">
+            <h4 style="font-size: 1.15rem; color: #0f172a; margin-bottom: 0.35rem;">Is your EV business listed?</h4>
+            <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 0;">
+              Join the AVENZO Network to showcase your products, discover verified distributors and access institutional procurement opportunities.
+            </p>
+          </div>
+          <a href="join.html" class="btn btn-primary">Join the Network</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-column">
+          <img src="images/avenzo-logo.jpg" alt="AVENZO" class="footer-brand-logo">
+          <p class="footer-brand-tagline">
+            Building India's PAN-India EV Business Network. Connecting manufacturers, distributors, fleets and institutions.
+          </p>
+          <div class="footer-location-info">
+            13, Institutional Area, Lodhi Road,<br>
+            New Delhi 110003, India
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-column-title">Network</h4>
+          <ul class="footer-links-list">
+            <li><a href="network.html" class="footer-link">Manufacturers</a></li>
+            <li><a href="network.html" class="footer-link">Distributors & Dealers</a></li>
+            <li><a href="network.html" class="footer-link">Fleets & Businesses</a></li>
+            <li><a href="network.html" class="footer-link">Institutions</a></li>
+            <li><a href="network.html" class="footer-link">Ecosystem Partners</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-column-title">Opportunities</h4>
+          <ul class="footer-links-list">
+            <li><a href="opportunities.html" class="footer-link">Business Opportunities</a></li>
+            <li><a href="requirement.html" class="footer-link">Post a Requirement</a></li>
+            <li><a href="opportunities.html" class="footer-link">Distribution Requests</a></li>
+            <li><a href="opportunities.html" class="footer-link">Fleet RFQs</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-column-title">Company</h4>
+          <ul class="footer-links-list">
+            <li><a href="about.html" class="footer-link">About AVENZO</a></li>
+            <li><a href="how-it-works.html" class="footer-link">How It Works</a></li>
+            <li><a href="verified.html" class="footer-link">AVENZO Verified</a></li>
+            <li><a href="about.html" class="footer-link">Strategic Vision</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-column-title">Join</h4>
+          <ul class="footer-links-list">
+            <li><a href="join.html" class="footer-link">Join AVENZO Network</a></li>
+            <li><a href="requirement.html" class="footer-link">Post an RFP / Requirement</a></li>
+            <li><a href="verified.html" class="footer-link">Verification Standard</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>© 2026 AVENZO. All rights reserved.</div>
+        <div>Building India's PAN-India EV Business Network.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/network.js"></script>
+</body>
+</html>

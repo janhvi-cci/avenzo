@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join the AVENZO Network — Registration</title>
+  <meta name="description" content="Register your EV manufacturing, distribution, fleet, or service business on India's trusted B2B EV network.">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- Sticky Global Navbar -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo-link" aria-label="AVENZO Home">
+        <img src="images/avenzo-logo.jpg" alt="AVENZO Logo" class="brand-logo-img">
+      </a>
+
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="network.html" class="nav-link">Network</a>
+        <a href="opportunities.html" class="nav-link">Opportunities</a>
+        <a href="how-it-works.html" class="nav-link">How It Works</a>
+        <a href="verified.html" class="nav-link">AVENZO Verified</a>
+        <a href="about.html" class="nav-link">About</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="requirement.html" class="btn btn-secondary btn-sm">Post a Requirement</a>
+        <a href="join.html" class="btn btn-primary btn-sm">Join AVENZO</a>
+      </div>
+
+      <button class="mobile-menu-toggle" aria-label="Open Navigation Menu">
+        <i data-lucide="menu" style="width: 24px; height: 24px;"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-backdrop"></div>
+  <div class="mobile-nav-panel">
+    <div class="mobile-nav-header">
+      <img src="images/avenzo-logo.jpg" alt="AVENZO" style="height: 36px; width: auto;">
+      <button class="mobile-nav-close" style="background: none; border: none; cursor: pointer; color: #0f172a;" aria-label="Close Navigation Menu">
+        <i data-lucide="x" style="width: 24px; height: 24px;"></i>
+      </button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link">Home <i data-lucide="chevron-right" style="width: 16px;"></i></a>
+      <a href="network.html" class="mobile-nav-link">Network <i data-lucide="chevron-right" style="width: 16px;"></i></a>
+      <a href="opportunities.html" class="mobile-nav-link">Opportunities <i data-lucide="chevron-right" style="width: 16px;"></i></a>
+      <a href="how-it-works.html" class="mobile-nav-link">How It Works <i data-lucide="chevron-right" style="width: 16px;"></i></a>
+      <a href="verified.html" class="mobile-nav-link">AVENZO Verified <i data-lucide="chevron-right" style="width: 16px;"></i></a>
+      <a href="about.html" class="mobile-nav-link">About <i data-lucide="chevron-right" style="width: 16px;"></i></a>
+    </div>
+    <div class="mobile-nav-actions">
+      <a href="requirement.html" class="btn btn-secondary w-full">Post a Requirement</a>
+      <a href="join.html" class="btn btn-primary w-full">Join AVENZO</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- Page Hero -->
+    <section class="page-hero" style="padding-bottom: 2.5rem;">
+      <div class="container">
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span> Member Onboarding
+        </div>
+        <h1 class="page-hero-title">Join the AVENZO Network</h1>
+        <p class="page-hero-desc">
+          Tell us about your organisation and what you're looking to achieve through AVENZO.
+        </p>
+      </div>
+    </section>
+
+    <!-- Native Multi-Step Form Section -->
+    <section class="section-py" style="background-color: var(--bg-page); padding-top: 2rem;">
+      <div class="container">
+        <div class="form-wrapper-card">
+          <!-- Step Progress Indicator -->
+          <div class="form-progress-bar">
+            <div class="form-progress-fill" style="width: 0%;"></div>
+            
+            <div class="progress-step-node active" data-step="1">
+              <div class="step-node-circle">1</div>
+              <span class="step-node-label">About You</span>
+            </div>
+
+            <div class="progress-step-node" data-step="2">
+              <div class="step-node-circle">2</div>
+              <span class="step-node-label">Your Business</span>
+            </div>
+
+            <div class="progress-step-node" data-step="3">
+              <div class="step-node-circle">3</div>
+              <span class="step-node-label">Your Goals</span>
+            </div>
+          </div>
+
+          <!-- Multi-Step Form -->
+          <form id="joinAvenzoForm" novalidate>
+            
+            <!-- STEP 1: About You -->
+            <div class="form-step-pane active" data-step="1">
+              <h2 class="step-title">Step 1 — Organisation & Contact</h2>
+              <p class="step-desc">Provide primary business details and point-of-contact information.</p>
+
+              <!-- Organisation Type -->
+              <div class="form-group">
+                <label for="orgType">Organisation Type <span class="required-star">*</span></label>
+                <select id="orgType" name="orgType" class="form-control" data-required="true" data-empty-msg="Please select your organisation type.">
+                  <option value="">Select your organisation type...</option>
+                  <option value="EV Manufacturer">EV Manufacturer</option>
+                  <option value="Distributor / Dealer">Distributor / Dealer</option>
+                  <option value="Fleet / Mobility Business">Fleet / Mobility Business</option>
+                  <option value="Corporate / Business Buyer">Corporate / Business Buyer</option>
+                  <option value="Institution / PSU / Govt">Institution / PSU / Govt</option>
+                  <option value="Charging Infrastructure Provider">Charging Infrastructure Provider</option>
+                  <option value="Finance Provider / NBFC">Finance Provider / NBFC</option>
+                  <option value="Service & Maintenance Provider">Service & Maintenance Provider</option>
+                  <option value="Spare Parts / Components Supplier">Spare Parts / Components Supplier</option>
+                  <option value="Technology / Software Provider">Technology / Software Provider</option>
+                  <option value="Other EV Ecosystem Business">Other EV Ecosystem Business</option>
+                </select>
+                <div class="field-error-msg"><i data-lucide="alert-circle" style="width: 14px;"></i> <span>Please select an organisation type.</span></div>
+              </div>
+
+              <!-- Company Name -->
+              <div class="form-group">
+                <label for="companyName">Organisation / Company Name <span class="required-star">*</span></label>
+                <input type="text" id="companyName" name="companyName" class="form-control" placeholder="e.g. Nexus Electro Motors Pvt Ltd" data-required="true" data-empty-msg="Please enter your organisation or company name.">
+                <div class="field-error-msg"><i data-lucide="alert-circle" style="width: 14px;"></i> <span>Please enter company name.</span></div>
+              </div>
+
+              <!-- Contact Person -->
+              <div class="form-group">
+                <label for="contactPerson">Contact Person Name <span class="required-star">*</span></label>
+                <input type="text" id="contactPerson" name="contactPerson" class="form-control" placeholder="e.g. Rajesh Sharma (Director / Head of Business)" data-required="true" data-empty-msg="Please enter contact person name.">
+                <div class="field-error-msg"><i data-lucide="alert-circle" style="width: 14px;"></i> <span>Please enter contact person name.</span></div>
+              </div>
+
+              <!-- Business Email -->
+              <div class="form-group">
+                <label for="businessEmail">Business Email <span class="required-star">*</span></label>
+                <input type="email" id="businessEmail" name="businessEmail" class="form-control" placeholder="e.g. rajesh@nexuselectro.com" data-required="true" data-empty-msg="Please enter your business email.">
+                <div class="field-error-msg"><i data-lucide="alert-circle" style="width: 14px;"></i> <span>Please enter a valid business email.</span></div>
+              </div>
+
+              <!-- Phone / WhatsApp -->
+              <div class="form-group">
+                <label for="phoneWhatsApp">Phone / WhatsApp Number <span class="required-star">*</span></label>
+                <input type="tel" id="phoneWhatsApp" name="phoneWhatsApp" class="form-control" placeholder="e.g. +91 98765 43210" data-required="true" data-empty-msg="Please enter your phone or WhatsApp number.">
+                <div class="field-error-msg"><i data-lucide="alert-circle" style="width: 14px;"></i> <span>Please enter your phone or WhatsApp number.</span></div>
+              </div>
+
+              <div class="form-actions-row" style="justify-content: flex-end;">
+                <button type="button" class="btn btn-primary btn-next-step">
+                  Continue to Business Details <i data-lucide="arrow-right" style="width: 16px;"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- STEP 2: Your Business -->
+            <div class="form-step-pane" data-step="2">
+              <h2 class="step-title">Step 2 — Business Profile & Categories</h2>
+              <p class="step-desc">Specify your geographical presence, operations, and product categories.</p>
+
+              <!-- Primary Location -->
+              <div class="form-group">
+                <label for="location">Primary Location / Operating States <span class="required-star">*</span></label>
+                <input type="text" id="location" name="location" class="form-control" placeholder="e.g. Delhi NCR, Maharashtra, Rajasthan, Karnataka" data-required="true" data-empty-msg="Please enter your operating states or primary location.">
+                <div class="field-error-msg"><i data-lucide="alert-circle" style="width: 14px;"></i> <span>Please enter operating location.</span></div>
+              </div>
+
+              <!-- Business Description -->
+              <div class="form-group">
+                <label for="businessDesc">Tell us about your business <span class="required-star">*</span></label>
+                <textarea id="businessDesc" name="businessDesc" rows="4" class="form-control" placeholder="Describe your core products, current scale, manufacturing facilities, dealership network, or fleet size..." data-required="true" data-empty-msg="Please share a brief summary of your business."></textarea>
+                <div class="field-error-msg"><i data-lucide="alert-circle" style="width: 14px;"></i> <span>Please describe your business.</span></div>
+              </div>
+
+              <!-- EV Categories (Checkboxes) -->
+              <div class="form-group">
+                <label>EV Categories Relevant to Your Organisation</label>
+                <div class="checkbox-grid">
+                  <label class="custom-checkbox-label">
+                    <input type="checkbox" name="evCategories" value="Electric 2-Wheelers">
+                    <span>Electric 2-Wheelers</span>
+                  </label>
+                  <label class="custom-checkbox-label">
+                    <input type="checkbox" name="evCategories" value="Electric 3-Wheelers (Cargo & Passenger)">
+                    <span>Electric 3-Wheelers (Cargo & Passenger)</span>
+                  </label>
+                  <label class="custom-checkbox-label">
+                    <input type="checkbox" name="evCategories" value="Commercial & Freight EVs">
+                    <span>Commercial & Freight EVs</span>
+                  </label>
+                  <label class="custom-checkbox-label">
+                    <input type="checkbox" name="evCategories" value="Electric 4-Wheelers / Passenger Cars">
+                    <span>Electric 4-Wheelers / Cars</span>
+                  </label>
+                  <label class="custom-checkbox-label">
+                    <input type="checkbox" name="evCategories" value="Electric Buses & Campus Shuttles">
+                    <span>Electric Buses & Shuttles</span>
+                  </label>
+                  <label class="custom-checkbox-label">
+                    <input type="checkbox" name="evCategories" value="Charging Infrastructure & Stations">
+                    <span>Charging Infrastructure</span>
+                  </label>
+                  <label class="custom-checkbox-label">
+                    <input type="checkbox" name="evCategories" value="Battery, Motors & Powertrain Components">
+                    <span>Batteries & Components</span>
+                  </label>
+                  <label class="custom-checkbox-label">
+                    <input type="checkbox" name="evCategories" value="Fleet Telematics & Software">
+                    <span>Telematics & Software</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-actions-row">
+                <button type="button" class="btn btn-secondary btn-prev-step">
+                  <i data-lucide="arrow-left" style="width: 16px;"></i> Back
+                </button>
+                <button type="button" class="btn btn-primary btn-next-step">
+                  Continue to Goals <i data-lucide="arrow-right" style="width: 16px;"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- STEP 3: Your Goals -->
+            <div class="form-step-pane" data-step="3">
+              <h2 class="step-title">Step 3 — Your Objectives & Goals</h2>
+              <p class="step-desc">Let us know how AVENZO can best help your organisation grow.</p>
+
+              <!-- What are you looking for -->
+              <div class="form-group">
+                <label for="goals">What are you looking to achieve through AVENZO? <span class="required-star">*</span></label>
+                <textarea id="goals" name="goals" rows="4" class="form-control" placeholder="e.g. Looking for distributors in West India / Seeking fleet procurement RFQs / Finding institutional EV deployment opportunities / Expanding charging network partnerships..." data-required="true" data-empty-msg="Please share your objectives with AVENZO."></textarea>
+                <div class="field-error-msg"><i data-lucide="alert-circle" style="width: 14px;"></i> <span>Please describe your objectives.</span></div>
+              </div>
+
+              <!-- Anything else -->
+              <div class="form-group">
+                <label for="additionalInfo">Anything else you'd like AVENZO to know?</label>
+                <textarea id="additionalInfo" name="additionalInfo" rows="3" class="form-control" placeholder="Certifications held (ARAI/ICAT), target timelines, existing partners, or specific requirements..."></textarea>
+              </div>
+
+              <div class="form-actions-row">
+                <button type="button" class="btn btn-secondary btn-prev-step">
+                  <i data-lucide="arrow-left" style="width: 16px;"></i> Back
+                </button>
+                <button type="submit" class="btn btn-primary btn-lg" id="submitJoinFormBtn">
+                  <i data-lucide="check" style="width: 18px;"></i> Submit & Review Registration
+                </button>
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Submission / Loading Overlay Modal -->
+  <div id="submissionModal" class="submission-modal-overlay">
+    <div class="submission-modal-card">
+      <div class="modal-icon-spinner"></div>
+      <h3 class="modal-title" id="modalTitle">Preparing your AVENZO registration...</h3>
+      <p class="modal-desc" id="modalNoticeText">
+        You're almost there. Review your information and submit the final form to complete your registration.
+      </p>
+      
+      <div class="modal-notice-box">
+        <i data-lucide="info" style="width: 20px; height: 20px;"></i>
+        <div>
+          The prefilled registration form has been prepared and opened in a <strong>new tab</strong>. If your popup blocker prevented it, please click the button below.
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
+        <a id="modalDirectLink" href="#" target="_blank" class="btn btn-primary btn-sm">
+          Open Registration Form <i data-lucide="external-link" style="width: 15px;"></i>
+        </a>
+        <button type="button" id="modalCloseBtn" class="btn btn-secondary btn-sm">
+          Close Window
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-column">
+          <img src="images/avenzo-logo.jpg" alt="AVENZO" class="footer-brand-logo">
+          <p class="footer-brand-tagline">
+            Building India's PAN-India EV Business Network. Connecting manufacturers, distributors, fleets and institutions.
+          </p>
+          <div class="footer-location-info">
+            13, Institutional Area, Lodhi Road,<br>
+            New Delhi 110003, India
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-column-title">Network</h4>
+          <ul class="footer-links-list">
+            <li><a href="network.html" class="footer-link">Manufacturers</a></li>
+            <li><a href="network.html" class="footer-link">Distributors & Dealers</a></li>
+            <li><a href="network.html" class="footer-link">Fleets & Businesses</a></li>
+            <li><a href="network.html" class="footer-link">Institutions</a></li>
+            <li><a href="network.html" class="footer-link">Ecosystem Partners</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-column-title">Opportunities</h4>
+          <ul class="footer-links-list">
+            <li><a href="opportunities.html" class="footer-link">Business Opportunities</a></li>
+            <li><a href="requirement.html" class="footer-link">Post a Requirement</a></li>
+            <li><a href="opportunities.html" class="footer-link">Distribution Requests</a></li>
+            <li><a href="opportunities.html" class="footer-link">Fleet RFQs</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-column-title">Company</h4>
+          <ul class="footer-links-list">
+            <li><a href="about.html" class="footer-link">About AVENZO</a></li>
+            <li><a href="how-it-works.html" class="footer-link">How It Works</a></li>
+            <li><a href="verified.html" class="footer-link">AVENZO Verified</a></li>
+            <li><a href="about.html" class="footer-link">Strategic Vision</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-column-title">Join</h4>
+          <ul class="footer-links-list">
+            <li><a href="join.html" class="footer-link">Join AVENZO Network</a></li>
+            <li><a href="requirement.html" class="footer-link">Post an RFP / Requirement</a></li>
+            <li><a href="verified.html" class="footer-link">Verification Standard</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>© 2026 AVENZO. All rights reserved.</div>
+        <div>Building India's PAN-India EV Business Network.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/forms.js"></script>
+</body>
+</html>
