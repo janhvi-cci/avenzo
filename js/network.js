@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
           `}
         </div>
 
-        <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.8125rem; color: #64748b; margin-bottom: 0.75rem;">
+        <div class="directory-meta-row" style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.8125rem; color: #64748b; margin-bottom: 0.75rem;">
           <i data-lucide="map-pin" style="width: 14px; height: 14px; color: #10b981;"></i>
           <span>${item.location}</span>
           <span style="color: #cbd5e1;">•</span>
